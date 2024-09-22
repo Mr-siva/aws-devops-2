@@ -19,11 +19,12 @@ phases:
   post_build:
     commands:
       - ls -la
-      #- aws s3 cp dist/my-angular-project/ s3://angular-project-demo-b6/ --recursive
-#artifacts:
-#  base-directory: dist/my-angular-project
-#  files:
-#    - "**/*"
+      - aws s3 cp dist/my-angular-project/* s3://tmpo-s3/ --recursive
+
+artifacts:
+  base-directory: dist/my-angular-project
+  files:
+    - "**/*"
 
 # install
 # pre_build
