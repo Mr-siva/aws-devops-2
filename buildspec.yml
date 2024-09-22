@@ -16,10 +16,10 @@ phases:
     commands:
       - ng build --prod # to build anjular
 
-  post_build:
-    commands:
-      - ls -la
-      - aws s3 cp dist/my-angular-project/* s3://tmpo-s3/ --recursive
+#  post_build:
+#    commands:
+#      - ls -la
+#      - aws s3 cp dist/my-angular-project/* s3://tmpo-s3/ --recursive
 
 artifacts:
   base-directory: dist/my-angular-project
